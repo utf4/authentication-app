@@ -1,0 +1,112 @@
+// Define reusable variables for colors and shadow
+$primary-color: #73cfc0;
+$background-color: #fff;
+$shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+
+// Reusable button styles
+@mixin button-styles {
+  font-family: system-ui;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 12px 60px;
+  height: 50px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border-radius: 30px;
+  background: $primary-color;
+  box-shadow: $shadow;
+}
+
+// Reusable heading styles
+@mixin heading-styles {
+    font-family: system-ui;
+    margin: 0px;
+    font-weight: 900;
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #73cfc0;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 40px;
+    margin-bottom: 20px;
+  }
+  // Reusable wrapper styles
+@mixin wrapper-styles {
+    text-align: center;
+    border-radius: 50px;
+    background: #fff;
+    box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.5);
+    width: 70vw;
+    height: 70vh;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+// Reusable paragraph styles
+
+  @mixin paragraph-styles {
+    font-family: system-ui;
+    margin: 0px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #73cfc0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+// Reusable form input styles
+@mixin input-styles {
+  font-family: system-ui;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+
+// Reusable main section styles
+@mixin main-section-styles {
+  background: $background-color;
+  color: $primary-color;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: url("../images/bg.png");
+    position: absolute;
+    z-index: 100000;
+    left: 0px;
+    top: -3px;
+    z-index: 1;
+    transform: rotate(180deg);
+  }
+  &::after {
+    content: url("../images/bg.png");
+    position: absolute;
+    z-index: 100000;
+    bottom: -3px;
+    right: 0px;
+    z-index: 1;
+    transform: rotate(0deg);
+  }
+}
+

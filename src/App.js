@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./components/context/AuthContext";
-import PublicPage from "./components/PublicPage";
-import PrivatePage from "./components/PrivatePage";
-import PrivateRoute from "./components/PrivateRoute";
+import { AuthProvider } from "./context/AuthContext";
+import PublicPage from "./containers/PublicPageContainer";
+import PrivatePage from "./containers/PrivatePageContainer";
+import PrivateRoute from "./containers/PrivateRoute";
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<PublicPage />} />
           <Route path="" element={<PrivateRoute />}>
-            <Route path="/private" element={<PrivatePage />} />
+            <Route path="/dashboard" element={<PrivatePage />} />
           </Route>
         </Routes>
       </BrowserRouter>

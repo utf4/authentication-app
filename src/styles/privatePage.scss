@@ -1,0 +1,18 @@
+// Reusing Styling for Private Page through mixins
+
+@import "styles";
+.main_section {
+  @include main-section-styles;
+  .main_wrapper {
+    @include wrapper-styles;
+  }
+  h1 {
+    @include heading-styles;
+  }
+  p {
+    @include paragraph-styles;
+  }
+  button {
+    @include button-styles;
+  }
+}
